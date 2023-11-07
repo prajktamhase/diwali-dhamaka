@@ -21,74 +21,84 @@ const GREETINGS = [
 function Home() {
     const [searchParams] = useSearchParams();
 
-    const [to ,setTo]=useState(searchParams.get("to"));
-    const [from ,setFrom]=useState(searchParams.get("from"));
-    const [greetingNumber ,setGreetingNumber]=useState( searchParams.get("g") >= GREETINGS.length ? 0 : searchParams.get("g") || 0);
-    const [themeNumber ,setThemeNumber]=useState(searchParams.get("t"));
+    const [to, setTo] = useState(searchParams.get("to"));
+    const [from, setFrom] = useState(searchParams.get("from"));
+    const [greetingNumber, setGreetingNumber] = useState(searchParams.get("g") >= GREETINGS.length ? 0 : searchParams.get("g") || 0);
+    const [themeNumber, setThemeNumber] = useState(searchParams.get("t"));
 
     return (
         <>
             <div className="">
                 <div className={`greating-container ${`theme-${themeNumber}`}`}>
-                    
-                {/* <img src={Diya} className="card-img image"/> */}
-                <div className="container">
-                <img src={diwali} className="diwali-design"/>
-                <img src={Diya} className="card-img image"/> 
-                <img src={diwali} className="diwali-design"/>
-                </div>
+
+                    {/* <img src={Diya} className="card-img image"/> */}
+                    <div className="container">
+                        <img src={diwali} className="diwali-design" />
+                        <img src={Diya} className="card-img image" />
+                        <img src={diwali} className="diwali-design" />
+                    </div>
 
                     <span className="text-size">Dear {to}💖</span>
                     <p className="text-size">
-                        {GREETINGS[greetingNumber] }
-                    </p><br/>
+                        {GREETINGS[greetingNumber]}
+                    </p><br />
                     <span className="text-card">🙏'शुभेच्छुक' {from}</span>
                 </div>
-                <p className="theme">{import.meta.env.VITE_BASE_URL}?to={to}&from={from}&g={greetingNumber}&t={themeNumber}</p>
+                <h3 className="color">Do you want to create your own Diwali Greeting? Customize it here👇</h3>
                
-               <div className="flex-container">
-               <input type="text"
-               placeholder="Friend Name"
-               value={to}
-               onChange={(e)=>{
-                setTo(e.target.value)
-               }}
-               className="box"/>
+                <p className="url1" onClick={() => {
+                    const url = `${import.meta.env.VITE_BASE_URL}?to=${to}&from=${from}&g=${greetingNumber}&t=${themeNumber}`
+                    navigator.clipboard.writeText(url);
+                }} >
+                </p>
 
-               <input type="text"
-               placeholder="Your Name"
-               value={from}
-               onChange={(e)=>{
-                setFrom(e.target.value)
-               }}
-               className="box"/>
+                <p className="theme">
+                    {import.meta.env.VITE_BASE_URL}?to={to}&from={from}&g={greetingNumber}&t={themeNumber}
+                </p>
 
-               <select value={greetingNumber} onChange={(e)=>{
-setGreetingNumber(e.target.value)
-               }} className="box1">
-                <option value="">Greeting</option>
-                <option value="1">Greeting1</option>
-                <option value="2">Greeting2</option>
-                <option value="3">Greeting3</option>
-                <option value="4">Greeting4</option>
-                <option value="5">Greeting5</option>
-               </select>
+                <div className="flex-container">
+                    <input type="text"
+                        placeholder="Friend Name"
+                        value={to}
+                        onChange={(e) => {
+                            setTo(e.target.value)
+                        }}
+                        className="box" />
 
-               <select value={themeNumber} onChange={(e)=>{
-setThemeNumber(e.target.value)
-               }} className="box1">
-                <option value="0">Theme</option>
-                <option value="1">Theme1</option>
-                <option value="2">Theme2</option>
-                <option value="3">Theme3</option>
-                <option value="4">Theme4</option>
-                <option value="5">Theme5</option>
-                <option value="6">Theme6</option>
-               </select>
-               </div>
+                    <input type="text"
+                        placeholder="Your Name"
+                        value={from}
+                        onChange={(e) => {
+                            setFrom(e.target.value)
+                        }}
+                        className="box" />
+
+                    <select value={greetingNumber} onChange={(e) => {
+                        setGreetingNumber(e.target.value)
+                    }} className="box1">
+                        <option value="">Greeting</option>
+                        <option value="1">Greeting1</option>
+                        <option value="2">Greeting2</option>
+                        <option value="3">Greeting3</option>
+                        <option value="4">Greeting4</option>
+                        <option value="5">Greeting5</option>
+                    </select>
+
+                    <select value={themeNumber} onChange={(e) => {
+                        setThemeNumber(e.target.value)
+                    }} className="box1">
+                        <option value="0">Theme</option>
+                        <option value="1">Theme1</option>
+                        <option value="2">Theme2</option>
+                        <option value="3">Theme3</option>
+                        <option value="4">Theme4</option>
+                        <option value="5">Theme5</option>
+                        <option value="6">Theme6</option>
+                    </select>
+                </div>
 
             </div>
         </>
-        )
-    }
+    )
+}
 export default Home
