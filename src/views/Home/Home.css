@@ -1,6 +1,13 @@
 .greating-container{
+    width: 800px;
     background-color: antiquewhite;
     border-radius: 20px;
     box-shadow: 0 1px 3px 0 black;
+    margin: 200px auto;
+    padding: 20px 20px;
     
+}
+.text-card{
+  margin-bottom: 5px;
+  margin-right: -5px;
 }
