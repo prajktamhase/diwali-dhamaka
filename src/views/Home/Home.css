@@ -1,13 +1,141 @@
-.greating-container{
-    width: 800px;
-    background-color: antiquewhite;
-    border-radius: 20px;
-    box-shadow: 0 1px 3px 0 black;
-    margin: 200px auto;
-    padding: 20px 20px;
-    
+.greating-container {
+  background-color: rgb(103, 96, 96);
+  border-radius: 20px;
+  box-shadow: 0 1px 3px 0 black;
+  margin: 50px auto;
+  padding: 40px 30px;
+  position: relative;
+  width: 50%;
+  display: block;
+  /* height: 300px;  */
+  color: white;
 }
-.text-card{
-  margin-bottom: 5px;
-  margin-right: -5px;
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  margin-top: -50px;
+}
+
+.text-size {
+  font-size: 25px;
+}
+
+.text-card {
+  bottom: 10px;
+  right: 15px;
+  padding: 10px;
+  font-size: 23px;
+  position: absolute;
+}
+
+body {
+  background-image: url("diwali-gif.gif");
+  mask-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+  width: 100%;
+  height: 100vh;
+}
+
+.image {
+  /* bottom: 0px;  */
+  left: 10px;
+  padding: 5px;
+  font-size: 23px;
+  margin-top: 10px;
+  border-radius: 50%;
+}
+
+.card-img {
+  height: 100px;
+}
+
+.theme-1 {
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  ;
+}
+
+.theme-2 {
+  background-color: #FA8BFF;
+  background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+
+}
+
+.theme-3 {
+  background-color: #FBDA61;
+  background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+
+}
+
+.theme-4 {
+  background-color: #FEE140;
+  background-image: linear-gradient(90deg, #FEE140 0%, #FA709A 100%);
+
+}
+
+.theme-5 {
+  background-color: #74EBD5;
+  background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
+
+}
+
+.theme-6 {
+  background-color: #FF3CAC;
+  background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+
+}
+
+
+
+.box{
+  width: 200px;
+  margin: 20px;
+  font-size: 25px;
+  padding: 10px 100px;
+  background-color: rgb(215, 213, 213);
+  color:rgb(11, 11, 68);
+}
+.box1{
+  
+  margin: 20px;
+  font-size: 20px;
+  padding: 10px 40px;
+  background-color: rgb(215, 213, 213);
+  color:rgb(11, 11, 68);
+}
+.theme{
+  margin: 50px auto;
+  text-align: center;
+  font-size: 20px;
+  background-color: rgb(215, 213, 213);
+  color:rgb(11, 11, 68);
+  width: fit-content;
+  padding: 12px 70px;
+  border-radius: 20px;
+}
+
+.flex-container{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+@media screen and (max-width:760px) {
+  .greating-container {
+    width: 80%;
+
+  }
+
+  body {
+    background-image: url("/src/views/Home/diwali-gif.gif");
+    mask-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+    width: 104%;
+    height: 76vh;
+  }
+
 }
