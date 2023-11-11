@@ -47,18 +47,23 @@ function Home() {
                 <h3 className="color">Do you want to create your own Diwali Greeting? Customize it here👇</h3>
                
                 <p className="url1" onClick={() => {
-                    const url = `${import.meta.env.VITE_BASE_URL}?to=${to}&from=${from}&g=${greetingNumber}&t=${themeNumber}`
+                    const url = `${import.meta.env.VITE_BASE_URL}?to=${to}&from=${from}&g=${greetingNumber}&t=${themeNumber}`;
                     navigator.clipboard.writeText(url);
+                    alert(`copy to clipboard :${url}`);
                 }} >
-                </p>
-
-                <p className="theme">
+                      <p className="theme">
                     {import.meta.env.VITE_BASE_URL}?to={to}&from={from}&g={greetingNumber}&t={themeNumber}
                 </p>
+                
+                </p>
+
+                {/* <p className="theme">
+                    {import.meta.env.VITE_BASE_URL}?to={to}&from={from}&g={greetingNumber}&t={themeNumber}
+                </p> */}
 
                 <div className="flex-container">
                     <input type="text"
-                        placeholder="Friend Name"
+                        placeholder="To"
                         value={to}
                         onChange={(e) => {
                             setTo(e.target.value)
@@ -66,7 +71,7 @@ function Home() {
                         className="box" />
 
                     <input type="text"
-                        placeholder="Your Name"
+                        placeholder="From"
                         value={from}
                         onChange={(e) => {
                             setFrom(e.target.value)

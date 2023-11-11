@@ -1,5 +1,5 @@
 .greating-container {
-  background-color: rgb(103, 96, 96);
+  background-color: rgb(222, 220, 220);
   border-radius: 20px;
   box-shadow: 0 1px 3px 0 black;
   margin: 50px auto;
@@ -8,7 +8,7 @@
   width: 50%;
   display: block;
   /* height: 300px;  */
-  color: white;
+  color: black;
 }
 
 .container {
@@ -108,6 +108,7 @@ body {
 }
 .url1{
   cursor: pointer;
+ 
 }
 .color{
   color: black;
@@ -120,7 +121,7 @@ border-radius: 20px;
   font-size: 15px;
 }
 .theme{
-  margin: 20px auto;
+  margin: 50px auto;
   text-align: center;
   font-size: 20px;
   background-color: rgb(215, 213, 213);
@@ -139,8 +140,7 @@ border-radius: 20px;
 }
 @media screen and (max-width:760px) {
   .greating-container {
-    width: 80%;
-
+    width: 70%;
   }
 
   body {
